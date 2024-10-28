@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overnight Cost Estimator</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Vacation Resort</a>
+  </nav>
+
+  <main class="container">
+    <h2>Estimate Your Stay Cost</h2>
+    <form id="estimatorForm">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nights">Number of Nights:</label>
+        <input type="number" id="nights" name="nights" class="form-control" min="1" max="28" required>
+      </div>
+
+      <div class="form-group">
+        <label>Room Type:</label>
+        <div>
+          <label><input type="radio" name="roomType" value="queen" required> Queen</label>
+          <label><input type="radio" name="roomType" value="king"> King</label>
+          <label><input type="radio" name="roomType" value="suite"> 2-Bedroom Suite</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" name="adults" class="form-control" min="1" max="4" required>
+      </div>
+
+      <div class="form-group">
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" name="children" class="form-control" min="0" max="4" required>
+      </div>
+
+      <div class="form-group">
+        <label>Discount:</label>
+        <div>
+          <label><input type="radio" name="discount" value="none" required> None</label>
+          <label><input type="radio" name="discount" value="aaa"> AAA/Senior (10%)</label>
+          <label><input type="radio" name="discount" value="military"> Military (20%)</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Estimate Stay Cost</button>
+    </form>
+
+    <div id="result" class="mt-4"></div>
+  </main>
+
+  <script src="scripts/estimator.js"></script>
+</body>
+</html>
